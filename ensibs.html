@@ -1,0 +1,140 @@
+<!--page ensibs-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!--adapter la page aux écrans de différentes tailles-->
+    <meta name="viewport" content="width-device-with, initial-scale-1.0">
+    <title>Accueil</title>
+    <!--insérez le flaticon-->
+    <link rel="shortcut icon" href="ensibs.png" type="image/x-icon">
+    <link rel="stylesheet" href="">
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;/*supprimer les marges*/
+            padding:0; /*supprimer espacement interne*/
+        }
+        body{
+            font-family: Arial;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        header, footer{
+            background-color: #004d00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header{
+            font-size: 32px;
+        }
+        footer{
+            font-size: 16px;
+        }
+        .container{
+            flex: 1;
+            display: grid; /*concevoir une page avec des lignes et colonnes*/
+            width: 100%;
+            margin: 0;
+        }
+        nav,article{
+            padding: 20px;
+        }
+        nav{
+            background: whitesmoke;
+            flex: 1;
+            font-size: 15px;
+        }
+        article{
+            background-color: white;
+            font-size: 18px;
+        }
+        nav ul{
+            list-style-type: none; /*supprimer les puces ou numèros par défaut (ordonnée ou non)*/
+            padding: 0;
+        }
+        nav ul li{
+            flex: 1;
+        }
+        nav ul li a {
+            color: black;
+            font-size: 18px;
+            padding: 15px;
+            border: 1px solid whitesmoke;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box; /* la largeur et la hauteur incluent les bordures et les espacement internes*/
+        }
+        nav ul li a:hover{
+            background-color: #004d00;
+            color: white;
+        }
+        .btn{
+            display: inline-block; /*élément en ligne*/
+            padding: 15px 25px;
+            margin: 5px 0;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            background-color: #004d00;
+            border-radius: 5px;
+            text-decoration: none; /*enlever le soulignement du texte*/
+        }
+        .btn:hover{
+            background-color: #003300;
+        }
+
+        @media(min-width: 600px) { /* règle de média appliquée lorsque la largeur de l'ecran est d'au moins 600px*/
+            .container{
+                grid-template-columns: 20% 80%;/*deux colonnes*/
+                grid-template-rows: none;/*aucune ligne*/
+            }
+            nav{
+                order: 1;/*placé en premier dans l'ordre de la grille*/
+            }
+            article{
+                order: 2;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>ENSIBS</h2>
+    </header>
+    <a href="index.html"><img src="logoGI.jpg" width=250px height=100px alt=""></a>
+    <div class="container">
+        <nav><!--définit un ensemble de lien de navigation-->
+            <ul>
+                <li><a href="apprentissage.html" class="btn">Parcours Alternance</a></li>
+                <li><a href="https://www-ensibs.univ-ubs.fr/fr/formations/formations/diplome-d-ingenieur-DI/sciences-technologies-sante-STS/diplome-d-ingenieur-genie-industriel-4-0-IGEI00_207.html" class="btn">
+                Parcours Classique</a></li>
+            </ul>
+        </nav>
+        <article><!--définit un contenu indépendant-->
+            <h1>Découvrez l'école</h1>
+            <p> Implantés au sein de l'université de Bretagne-Sud, l'Ecole Nationale Supérieure d'ingénieurs de Bretagne-Sud 
+                (ENSIBS) propose six spécialités à Lorient et à Vannes</p>
+            <p>L'ENSIBS est une école d'ingénieurs associée au réseau Polytech et toutes ces formations sont habilitées 
+                par la Commission des Titres d'Ingénieurs (CTI) et accessibles après un bac +2 ou après le bac, 
+                grâce à nos 2 cycles pré-ingénieurs accessibles avec le concours Geipi Polytech</p>
+            <p>L'ENSIBS forme des ingénieurs aptes à innover et entreprendre. Membre de la Conférence des 
+                Directeurs des Grandes Écoles de Bretagne (CDGEB ), elle participe au développement de la 
+                formation et bénéficie de la synergie avec les Grandes Écoles de la région.</p>
+            <p>Les élèves suivent une formation équilibrée entre cours, travaux dirigés et pratiques
+                 qui mêlent enseignements scientifiques, technologiques et en sciences humaines et sociales.
+                  L'enseignement met l'accent sur la polyvalence et la pluridisciplinarité. 
+                  L'ingénieur est formé(e) à la conduite de projet, au management, au travail en réseau.</p>
+        </article>
+    </div>
+    <footer>
+        <p>Contactez-nous : contact@ensibs.fr | suivez-nous :
+            <a href="https://www-ensibs.univ-ubs.fr/fr/suivez-nous/facebook.html" class="btn">Facebook</a>
+            <a href="https://www-ensibs.univ-ubs.fr/fr/suivez-nous/twitter.html" class="btn">Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>
